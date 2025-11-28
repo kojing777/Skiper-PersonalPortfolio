@@ -10,9 +10,66 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid white;
+}
+.cta:hover {
+  border-bottom: 2px solid #d64726;
+  opacity: 0.8;
+  transition: 0.2s;
+}
+.cta:hover path {
+  fill: #d64726;
+}
+
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-style: normal;
   background-color: black;
   color: white;
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+header {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  padding: 1.2rem 0;
+}
+
+nav {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .logo {
+  font-size: 2rem;
+  font-weight: 800;
+}
+nav .menu {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+nav .btn-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */

@@ -22,6 +22,11 @@ a {
   padding-bottom: 0.5rem;
   border-bottom: 2px solid white;
 }
+@media (max-width: 768px) {
+  .cta {
+    padding-bottom: 0.3rem;
+  }
+}
 .cta:hover {
   border-bottom: 2px solid #d64726;
   opacity: 0.8;

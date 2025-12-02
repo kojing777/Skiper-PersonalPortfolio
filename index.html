@@ -101,5 +101,31 @@
         });
       })();
     </script>
+    <script>
+      // Reveal hero text and image with IntersectionObserver
+      (function () {
+        if (typeof window === 'undefined') return;
+
+        const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const targets = document.querySelectorAll('.hero-content, .hero-img-wrap');
+
+        if (prefersReduced) {
+          targets.forEach(el => el.classList.add('in-view'));
+          return;
+        }
+
+        function onEntry(entries, observer) {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+              observer.unobserve(entry.target);
+            }
+          });
+        }
+
+        const io = new IntersectionObserver(onEntry, { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.12 });
+        targets.forEach(el => io.observe(el));
+      })();
+    </script>
   </body>
 </html>

@@ -88,8 +88,7 @@ nav {
 
         @media (max-width: 768px) {
             font-size: 1.5rem;
-            margin-top: 0.6rem;
-            /* small top spacing to make the logo stand out on mobile */
+            margin-top: 0.6rem; /* small top spacing to make the logo stand out on mobile */
         }
     }
 
@@ -165,48 +164,130 @@ nav {
     }
 }
 
-//hero section 
+//hero section
 .hero {
     height: 100vh;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     position: relative;
+    overflow: hidden;
 
+    /* subtle dark gradient to improve text readability */
+    &::before{
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.15) 40%, transparent 70%);
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    /* place text above image, bottom centered */
     .hero-content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -46%);
+        width: min(1100px, 92%);
         text-align: center;
-        padding: 12vh 0;
+        z-index: 3;
+        color: white;
+        opacity: 0;
+        will-change: transform, opacity;
+
+        h1 {
+            font-size: 4.8rem; /* larger headline */
+            font-weight: 800;
+            line-height: 1.02;
+            margin: 0;
+            text-shadow: 0 8px 28px rgba(0,0,0,0.6);
+        }
+
+        h2 {
+            font-family: 'Monoton', cursive;
+            font-size: 2.2rem; /* larger subhead */
+            font-weight: 400;
+            font-style: normal;
+            margin: 0.6rem 0 0;
+            text-shadow: 0 6px 18px rgba(0,0,0,0.45);
+        }
+        .hero-cta{
+            display: inline-block;
+            margin-top: 1.6rem;
+            padding: 0.85rem 1.6rem;
+            background: $primary-color;
+            color: white;
+            border-radius: 10px;
+            font-weight: 700;
+            letter-spacing: 0.2px;
+            text-decoration: none;
+            box-shadow: 0 8px 26px rgba(214,70,38,0.14);
+            transition: transform 180ms ease, box-shadow 180ms ease, opacity 180ms ease;
+            z-index: 5;
+        }
+        .hero-cta:hover{ transform: translateY(-3px); opacity: 0.98; box-shadow: 0 14px 40px rgba(214,70,38,0.18); }
     }
 
-    h1 {
-        font-size: 6rem;
-        font-weight: 700;
-        line-height: 1;
-        margin: 0;
-    }
-
-    h2 {
-        font-family: 'Monoton', cursive;
-        font-size: 2.2rem;
-        font-weight: 400;
-        font-style: normal;
-        margin: 0.6rem 0 0;
-    }
-
+    /* full-bleed background image */
     .hero-img-wrap {
         position: absolute;
-        overflow: hidden;
-        width: 700px;
-        height: 100%;
-        z-index: -1;
+        inset: 0;
+        z-index: 0;
+        display: block;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
+        }
     }
 
-    .hero-imgage {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: top;
-        scale: 0.6;
+    @media (max-width: 768px) {
+        .hero-content {
+            top: 50%;
+            transform: translate(-50%, -48%);
+            padding: 0 1rem;
 
+            h1 { font-size: 2.6rem; }
+            h2 { font-size: 1.2rem; }
+        }
+
+        .hero::before { background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.35) 40%, rgba(0,0,0,0.12) 70%); }
+    }
+}
+
+/* Animations for hero (entrance) */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translate(-50%, -40%); }
+    to   { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(20px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Applying .in-view will run animations */
+.hero-content.in-view {
+    animation: fadeUp 700ms cubic-bezier(.16,.84,.25,1) forwards;
+}
+.hero-content.in-view h1 { animation-delay: 80ms; }
+.hero-content.in-view h2 { animation-delay: 260ms; }
+.hero-img-wrap.in-view {
+    animation: slideIn 700ms cubic-bezier(.16,.84,.25,1) forwards;
+    animation-delay: 420ms;
+}
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .hero-content,
+    .hero-img-wrap {
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+        opacity: 1 !important;
     }
 }

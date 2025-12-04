@@ -31,13 +31,13 @@ A **modern, interactive portfolio website** showcasing my skills as a **MERN Sta
 
 ## 🚀 Live Demo
 
-🔗 [**Visit My Portfolio**](https://portfolio-wine-alpha-82.vercel.app/)
+🔗 [**Visit My Portfolio**](https://bijaya-tamang.vercel.app/)
 
 ---
 
 ## 📸 Preview
 
-<img src='https://res.cloudinary.com/dp27ua535/image/upload/v1757216059/Screenshot_2025-09-07_091908_gjnpqc.png'/>
+<img src='https://res.cloudinary.com/dp27ua535/image/upload/v1764847212/Screenshot_2025-12-04_170419_kavbuk.png'/>
 
 ---
 

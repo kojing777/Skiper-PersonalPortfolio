@@ -310,7 +310,7 @@ const AboutMe = () => {
                 </motion.h2>
 
                 {/* Accent line */}
-                <div className="h-1 w-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-2 mb-6"></div>
+                <div className="h-1 w-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-6"></div>
 
                 {/* Text Content */}
                 <div className="space-y-5 roboto-slab">

@@ -463,7 +463,7 @@ const Projects = () => {
                         </h2>
                         <div className="flex items-center gap-3 mt-2">
                           <span
-                            className={`px-4 py-1 rounded-full font-medium ${
+                            className={`px-4 py-1 rounded-full font-medium pt-serif-regular ${
                               selectedProject.type === "Full-Stack"
                                 ? "bg-gradient-to-r from-indigo-500/20 to-purple-500/20 text-indigo-300"
                                 : "bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-300"
@@ -487,7 +487,7 @@ const Projects = () => {
                         onClick={() => setSelectedProject(null)}
                         className="p-3 hover:bg-slate-800 rounded-full transition-colors"
                       >
-                        <span className="text-2xl">×</span>
+                        <span className="text-3xl">×</span>
                       </button>
                     </div>
                   </div>
@@ -506,7 +506,7 @@ const Projects = () => {
                     <div className="grid md:grid-cols-3 gap-8">
                       {/* Description */}
                       <div className="md:col-span-2">
-                        <h3 className="text-2xl font-bold text-white mb-4">
+                        <h3 className="text-2xl font-bold roboto-slab text-white mb-4">
                           About This Project
                         </h3>
                         <p className="text-slate-300 mb-6">
@@ -514,7 +514,7 @@ const Projects = () => {
                         </p>
 
                         <div className="mb-8">
-                          <h4 className="text-xl font-bold text-white mb-4">
+                          <h4 className="text-xl font-bold roboto-slab text-white mb-4">
                             Key Features
                           </h4>
                           <div className="grid sm:grid-cols-2 gap-4">
@@ -524,7 +524,7 @@ const Projects = () => {
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ delay: i * 0.1 }}
-                                className="flex items-start gap-3 p-4 rounded-lg bg-slate-800/30"
+                                className="flex items-start gap-3 p-4 pt-serif-regular rounded-lg bg-slate-800/30"
                               >
                                 <div className="p-2 rounded-full bg-indigo-500/20">
                                   <div className="w-2 h-2 rounded-full bg-indigo-400" />
@@ -540,7 +540,7 @@ const Projects = () => {
 
                       {/* Tech Stack & Links */}
                       <div>
-                        <div className="mb-8">
+                        <div className="mb-8 pt-serif-regular">
                           <h4 className="text-xl font-bold text-white mb-4">
                             Tech Stack
                           </h4>
@@ -556,7 +556,7 @@ const Projects = () => {
                           </div>
                         </div>
 
-                        <div className="mb-8">
+                        <div className="mb-8 pt-serif-regular">
                           <h4 className="text-xl font-bold text-white mb-4">
                             Development Stack
                           </h4>
@@ -573,7 +573,7 @@ const Projects = () => {
                           </div>
                         </div>
 
-                        <div className="space-y-4">
+                        <div className="space-y-4 pt-serif-regular">
                           <motion.a
                             href={selectedProject.githubUrl}
                             target="_blank"

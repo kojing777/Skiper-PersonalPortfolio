@@ -255,7 +255,7 @@ const AboutMe = () => {
           </motion.h1>
 
           <motion.p
-            className="text-xl max-w-3xl mx-auto roboto-slab text-slate-300 mb-6"
+            className="text-xl md:text-2xl max-w-4xl mx-auto roboto-slab text-slate-300 mb-6"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}

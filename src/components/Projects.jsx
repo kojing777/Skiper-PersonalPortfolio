@@ -235,7 +235,7 @@ const Projects = () => {
             </h1>
           </div>
 
-          <p className="text-lg md:text-2xl roboto-slab text-slate-300 max-w-3xl mx-auto mb-8">
+          <p className="text-lg md:text-2xl roboto-slab text-slate-300 max-w-4xl mx-auto mb-8">
             Here are some of the projects I've built using modern technologies
             and best practices{" "}
           </p>

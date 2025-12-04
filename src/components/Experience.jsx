@@ -11,7 +11,7 @@ import {
 const Experience = () => {
   const [activeTab, setActiveTab] = useState("experience");
   const experienceRef = useRef(null);
-  const isInView = useInView(experienceRef, { once: true, amount: 0.3 });
+  const isInView = useInView(experienceRef, { once: true, amount: 0.15 });
 
   // Experience data
   const experiences = [
@@ -27,20 +27,6 @@ const Experience = () => {
         "Improved page load time by 40%",
         "Led a team of 3 developers",
         "Implemented CI/CD pipeline",
-      ],
-    },
-    {
-      id: 2,
-      role: "Web Development Intern",
-      company: "Digital Solutions LLC",
-      duration: "Jun 2022 - Dec 2022",
-      description:
-        "Built and maintained client websites. Implemented new features and optimized existing code for better performance.",
-      technologies: ["JavaScript", "HTML/CSS", "Node.js", "MongoDB"],
-      achievements: [
-        "Delivered 5+ client projects",
-        "Reduced bug reports by 60%",
-        "Created comprehensive documentation",
       ],
     },
     {
@@ -173,16 +159,16 @@ const Experience = () => {
           className="mx-auto mb-16 text-center"
         >
           <motion.h1
-            className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6"
+            className="text-4xl alkalami-regular md:text-5xl lg:text-6xl font-extrabold mb-6"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            My <span className="text-indigo-400">Journey</span>
+            My <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 text-transparent bg-clip-text">Journey</span>
           </motion.h1>
 
           <motion.p
-            className="text-xl text-slate-300 max-w-3xl mx-auto"
+            className="text-xl md:text-2xl roboto-slab text-slate-300 max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
@@ -268,52 +254,54 @@ const Experience = () => {
                 Work Experience
               </motion.h2>
 
-              <div className="relative">
+              <motion.div
+                className="relative"
+                variants={containerVariants}
+                initial="hidden"
+                animate={isInView ? "visible" : "hidden"}
+              >
                 {/* Timeline line */}
-                <div className="absolute left-7 top-0 bottom-0 w-0.5 bg-indigo-500/30"></div>
+                <div className="absolute left-7 top-0 bottom-0 w-0.5 bg-indigo-500/30 hidden sm:block"></div>
 
                 {experiences.map((exp, index) => (
                   <motion.div
                     key={exp.id}
-                    initial={{ opacity: 0, x: -30 }}
-                    animate={
-                      isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }
-                    }
-                    transition={{ duration: 0.5, delay: index * 0.15 }}
-                    className="relative pl-16 pb-8 last:pb-0"
+                    variants={itemVariants}
+                    transition={{ duration: 0.55, delay: index * 0.12 }}
+                    className="relative pl-12 sm:pl-16 pb-8 last:pb-0"
                   >
                     {/* Timeline dot */}
                     <motion.div
-                      className="absolute left-0 top-0 w-14 h-14 rounded-full bg-indigo-600 flex items-center justify-center shadow-lg"
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                      transition={{ type: "spring", stiffness: 300 }}
+                      className="absolute left-0 top-0 w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-indigo-600 flex items-center justify-center shadow-lg ring-1 ring-indigo-400/20"
+                      whileHover={{ scale: 1.06, rotate: 6 }}
+                      transition={{ type: "spring", stiffness: 260 }}
                     >
-                      <FaBriefcase className="text-white" />
+                      <FaBriefcase className="text-white text-base sm:text-lg" />
                     </motion.div>
 
                     <motion.div
-                      className="bg-slate-800/70 rounded-xl p-6 border border-slate-700/30"
-                      whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                      className="bg-slate-800/70 rounded-xl p-5 sm:p-6 border border-slate-700/30"
+                      whileHover={{ y: -6, transition: { duration: 0.18 } }}
                     >
-                      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-                        <div className="flex items-center gap-4">
+                      <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-4 mb-3 sm:mb-4">
+                        <div className="flex items-center gap-3">
                           <div>
-                            <h3 className="text-xl font-bold">{exp.role}</h3>
-                            <p className="text-slate-300">{exp.company}</p>
+                            <h3 className="text-lg sm:text-xl alkalami-regular font-bold">{exp.role}</h3>
+                            <p className="text-slate-300 roboto-slab">{exp.company}</p>
                           </div>
                         </div>
-                        <div className="flex items-center gap-2 text-slate-400">
+                        <div className="flex items-center gap-2 text-slate-400 text-sm">
                           <FaCalendarAlt />
                           <span>{exp.duration}</span>
                         </div>
                       </div>
 
-                      <p className="text-slate-300 mb-4">{exp.description}</p>
+                      <p className="text-slate-300 roboto-slab mb-4 text-sm sm:text-base">{exp.description}</p>
 
                       <div className="mb-4">
                         <h4 className="font-semibold text-slate-200 mb-2 flex items-center gap-2">
                           <motion.div
-                            animate={{ scale: [1, 1.1, 1] }}
+                            animate={{ scale: [1, 1.08, 1] }}
                             transition={{ duration: 2, repeat: Infinity }}
                           >
                             <FaStar className="text-yellow-400" />
@@ -324,9 +312,8 @@ const Experience = () => {
                           {exp.achievements.map((achievement, i) => (
                             <motion.li
                               key={i}
-                              initial={{ opacity: 0, x: -10 }}
-                              animate={isInView ? { opacity: 1, x: 0 } : {}}
-                              transition={{ delay: index * 0.15 + i * 0.1 }}
+                              variants={itemVariants}
+                              transition={{ delay: i * 0.06 + index * 0.06 }}
                               className="flex items-center text-sm text-slate-400"
                             >
                               <span className="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
@@ -340,9 +327,8 @@ const Experience = () => {
                         {exp.technologies.map((tech, i) => (
                           <motion.span
                             key={i}
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                            transition={{ delay: index * 0.15 + i * 0.1 }}
+                            variants={itemVariants}
+                            transition={{ delay: i * 0.04 + index * 0.04 }}
                             className="px-3 py-1 text-xs bg-slate-700/50 rounded-full text-slate-300 border border-slate-600/30"
                             whileHover={{ scale: 1.05 }}
                           >
@@ -353,7 +339,7 @@ const Experience = () => {
                     </motion.div>
                   </motion.div>
                 ))}
-              </div>
+              </motion.div>
             </motion.div>
           )}
 

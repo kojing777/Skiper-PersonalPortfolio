@@ -38,13 +38,16 @@ const Projects = () => {
   const [sectionInView, setSectionInView] = useState(false);
 
   useEffect(() => {
-    const updateScreen = () => {
-      setIsLargeScreen(window.innerWidth >= 768);
+    if (selectedProject) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
     };
-    updateScreen();
-    window.addEventListener("resize", updateScreen);
-    return () => window.removeEventListener("resize", updateScreen);
-  }, []);
+  }, [selectedProject]);
 
   useEffect(() => {
     const handleScroll = () => {

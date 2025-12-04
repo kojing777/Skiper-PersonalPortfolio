@@ -101,7 +101,7 @@ const Skills = () => {
           className="mx-auto mb-10 text-center"
         >
           <motion.h1
-            className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6"
+            className="text-4xl md:text-5xl alkalami-regular lg:text-6xl font-extrabold mb-6"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
@@ -113,7 +113,7 @@ const Skills = () => {
           </motion.h1>
 
           <motion.p
-            className="text-xl max-w-3xl mx-auto text-slate-300 mb-6"
+            className="text-xl max-w-3xl mx-auto roboto-slab text-slate-300 mb-6"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
@@ -126,7 +126,7 @@ const Skills = () => {
         {/* Technical Stack Section */}
         <div ref={skillsRef} className="mb-12">
           {/* Tech Stack Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 max-w-4xl mx-auto">
+          <div className="grid roboto-slab grid-cols-2 md:grid-cols-5 gap-6 max-w-4xl mx-auto">
             {techStack.map((tech, idx) => (
               <motion.div
                 key={idx}
@@ -147,22 +147,21 @@ const Skills = () => {
             transition={{ delay: 0.6, duration: 0.6, ease: "easeOut" }}
             className="mt-12 text-center"
           >
-            <h3 className="text-2xl font-bold mb-6 flex items-center justify-center gap-3">
-              <FaTools className="text-cyan-400" />
+            <h3 className="text-3xl alkalami-regular font-bold mb-6 flex items-center justify-center gap-3">
               Development <span className="text-cyan-400">Tools</span>
             </h3>
 
-            <div className="flex flex-wrap justify-center gap-6 max-w-2xl mx-auto">
+            <div className="flex  flex-wrap justify-center gap-6 max-w-2xl mx-auto">
               {toolsStack.map((tool, idx) => (
                 <motion.div
                   key={idx}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={isInView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ delay: 0.8 + idx * 0.1, duration: 0.5 }}
-                  className="flex flex-col items-center justify-center bg-gradient-to-b from-slate-800 to-slate-900 p-4 rounded-xl border border-slate-700/50 shadow-md min-w-[120px]"
+                  className="flex alkalami-regular flex-col items-center justify-center bg-gradient-to-b from-slate-800 to-slate-900 p-4 rounded-xl border border-slate-700/50 shadow-md min-w-[120px]"
                 >
                   <div className="text-3xl mb-2">{tool.icon}</div>
-                  <p className="font-medium text-center">{tool.name}</p>
+                  <p className="font-medium roboto-slab text-center">{tool.name}</p>
                 </motion.div>
               ))}
             </div>

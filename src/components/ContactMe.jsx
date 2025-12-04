@@ -274,7 +274,7 @@ const ContactMe = () => {
 
             {/* Social Links */}
             <motion.div className="pt-0" variants={itemVariants}>
-              <h3 className="text-xl font-semibold mb-4">Follow me on</h3>
+              <h3 className="text-xl pt-serif-regular font-semibold mb-4">Follow me on</h3>
               <div className="flex gap-4">
                 {[
                   {
@@ -356,12 +356,12 @@ const ContactMe = () => {
                 </motion.div>
               ) : (
                 <>
-                  <motion.h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                  <motion.h2 className="text-2xl pt-serif-regular font-bold mb-6 flex items-center gap-2">
                     <Send className="text-indigo-400" />
                     Send a Message
                   </motion.h2>
 
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form onSubmit={handleSubmit} className="space-y-6 roboto-slab">
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
                       whileInView={{ opacity: 1, y: 0 }}

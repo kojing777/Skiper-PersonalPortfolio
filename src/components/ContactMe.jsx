@@ -379,7 +379,8 @@ const ContactMe = () => {
                           <User className="text-slate-500" size={20} />
                         </div>
                         <motion.input
-                          whileFocus={{ scale: 1.01 }}
+                          whileHover={{ scale: 1.005, y: -1, boxShadow: "0 4px 12px rgba(99, 102, 241, 0.15)" }}
+                          transition={{ duration: 0.2 }}
                           type="text"
                           id="name"
                           name="name"
@@ -409,7 +410,8 @@ const ContactMe = () => {
                           <Mail className="text-slate-500" size={20} />
                         </div>
                         <motion.input
-                          whileFocus={{ scale: 1.01 }}
+                          whileHover={{ scale: 1.005, y: -1, boxShadow: "0 4px 12px rgba(99, 102, 241, 0.15)" }}
+                          transition={{ duration: 0.2 }}
                           type="email"
                           id="email"
                           name="email"
@@ -435,7 +437,8 @@ const ContactMe = () => {
                         Your Message
                       </label>
                       <motion.textarea
-                        whileFocus={{ scale: 1.01 }}
+                        whileHover={{ scale: 1.005, y: -1, boxShadow: "0 4px 12px rgba(99, 102, 241, 0.15)" }}
+                        transition={{ duration: 0.2 }}
                         id="message"
                         name="message"
                         value={formData.message}

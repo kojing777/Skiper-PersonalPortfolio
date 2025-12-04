@@ -30,7 +30,7 @@ const Experience = () => {
       ],
     },
     {
-      id: 3,
+      id: 2,
       role: "Freelance Web Developer",
       company: "Self-Employed",
       duration: "Mar 2021 - May 2022",
@@ -196,7 +196,7 @@ const Experience = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setActiveTab("experience")}
-              className={`px-6 py-3 rounded-full text-sm font-medium flex items-center gap-2 transition-all ${
+              className={`px-6 roboto-slab py-3 rounded-full text-sm font-medium flex items-center gap-2 transition-all ${
                 activeTab === "experience"
                   ? "bg-indigo-600 shadow-lg"
                   : "hover:bg-slate-700/50"
@@ -210,7 +210,7 @@ const Experience = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setActiveTab("education")}
-              className={`px-6 py-3 rounded-full text-sm font-medium flex items-center gap-2 transition-all ${
+              className={`px-6 roboto-slab py-3 rounded-full text-sm font-medium flex items-center gap-2 transition-all ${
                 activeTab === "education"
                   ? "bg-indigo-600 shadow-lg"
                   : "hover:bg-slate-700/50"
@@ -240,7 +240,7 @@ const Experience = () => {
               className="space-y-8"
             >
               <motion.h2
-                className="text-2xl font-bold mb-8 text-center flex items-center justify-center gap-3"
+                className="text-2xl roboto-slab font-bold mb-8 text-center flex items-center justify-center gap-3"
                 initial={{ opacity: 0, y: -10 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5 }}
@@ -249,7 +249,7 @@ const Experience = () => {
                   animate={{ rotate: [0, 5, -5, 0] }}
                   transition={{ duration: 4, repeat: Infinity }}
                 >
-                  <FaBriefcase className="text-indigo-400" />
+                  <FaBriefcase className=" text-indigo-400" />
                 </motion.div>
                 Work Experience
               </motion.h2>
@@ -352,7 +352,7 @@ const Experience = () => {
               className="space-y-8"
             >
               <motion.h2
-                className="text-2xl font-bold mb-8 text-center flex items-center justify-center gap-3"
+                className="text-2xl roboto-slab font-bold mb-8 text-center flex items-center justify-center gap-3"
                 initial={{ opacity: 0, y: -10 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5 }}

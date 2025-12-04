@@ -366,7 +366,7 @@ const Experience = () => {
                 Education
               </motion.h2>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 roboto-slab md:grid-cols-2 gap-6">
                 {education.map((edu, index) => (
                   <motion.div
                     key={edu.id}
@@ -387,17 +387,17 @@ const Experience = () => {
                         <FaGraduationCap className="text-purple-400" />
                       </motion.div>
                       <div>
-                        <h3 className="text-xl font-bold">{edu.degree}</h3>
-                        <p className="text-slate-300">{edu.institution}</p>
+                        <h3 className="text-xl pt-serif-regular font-bold">{edu.degree}</h3>
+                        <p className="text-slate-300 roboto-slab">{edu.institution}</p>
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-2 text-slate-400 mb-4">
+                    <div className="flex items-center roboto-slab gap-2 text-slate-400 mb-4">
                       <FaCalendarAlt />
                       <span>{edu.duration}</span>
                     </div>
 
-                    <p className="text-slate-300 mb-4">{edu.description}</p>
+                    <p className="text-slate-300 roboto-slab mb-4">{edu.description}</p>
 
                     <div>
                       <h4 className="font-semibold text-slate-200 mb-2 flex items-center gap-2">

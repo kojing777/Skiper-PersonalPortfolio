@@ -183,7 +183,7 @@ const ContactMe = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            className="space-y-8"
+            className="space-y-6"
           >
             <motion.h2
               className="text-3xl font-bold pt-serif-regular flex items-center gap-3"
@@ -207,7 +207,7 @@ const ContactMe = () => {
               or think you need my help with something, then get in touch.
             </motion.p>
 
-            <motion.div className="space-y-6 roboto-slab" variants={itemVariants}>
+            <motion.div className="space-y-5 roboto-slab" variants={itemVariants}>
               <motion.div
                 className="flex  items-center gap-4 p-4 rounded-xl bg-slate-800/30 border border-slate-700/30 transition-colors hover:bg-slate-800/50"
                 variants={itemVariants}

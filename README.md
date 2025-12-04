@@ -209,12 +209,6 @@ const COLORS = ["#A764FF", "#4B94FD", "#FD4B4E", "#FF8743"];
 
 ---
 
-## 📄 License
-
-Licensed under the [MIT License](LICENSE).
-
----
-
 ## 📞 Contact
 
 **Bijaya Tamang** – MERN Stack Developer

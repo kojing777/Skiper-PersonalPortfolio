@@ -1,6 +1,6 @@
 "use client";
 
-import  { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 // Smooth scroll handler
 const handleSmoothScroll = (e, targetId) => {
   e.preventDefault();
@@ -160,13 +160,13 @@ const Hero = () => {
         initial={{ x: -80, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1 }}
-        className="flex flex-col gap-6 max-w-2xl text-center md:text-left z-10"
+        className="flex mt-8 flex-col gap-6 max-w-3xl text-center md:text-left z-10"
       >
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="text-4xl md:text-6xl font-extrabold leading-tight"
+          className="text-3xl md:text-7xl font-extrabold leading-tight sofia-regular"
         >
           Hi, I'm{" "}
           <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 text-transparent bg-clip-text">
@@ -176,18 +176,18 @@ const Hero = () => {
 
         <TypeAnimation
           sequence={[
-            "MERN Stack Developer 💻",
+            "MERN Stack Developer 🧩",
             2000,
-            "Frontend Engineer 🎨",
+            "Frontend Engineer 🖥️",
             2000,
-            "React & Next.js Enthusiast ⚡",
+            "React & Next.js Enthusiast 🔥",
             2000,
-            "UI/UX Designer 🎯",
+            "UI/UX Designer 🎨",
             2000,
           ]}
           wrapper="span"
           speed={50}
-          className="text-xl md:text-2xl font-medium text-slate-300 min-h-[2rem] md:min-h-[2.5rem]"
+          className="text-sm md:text-xl font-medium text-slate-300 min-h-[2rem] md:min-h-[2.5rem]  playwrite-nz-guides-regular "
           repeat={Infinity}
         />
 
@@ -195,7 +195,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="text-base md:text-lg text-slate-400 max-w-lg"
+          className="roboto-slab text-base md:text-lg text-slate-400 max-w-lg"
         >
           Passionate about building modern, scalable, and user-friendly web
           applications with a focus on performance and design. Currently
@@ -216,7 +216,7 @@ const Hero = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 py-3 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:opacity-90 transition-all font-medium flex items-center gap-2 shadow-lg shadow-indigo-500/20"
+              className="pt-serif-regular px-6 py-3 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:opacity-90 transition-all font-medium flex items-center gap-2 shadow-lg shadow-indigo-500/20"
             >
               View Projects
             </motion.button>
@@ -225,7 +225,7 @@ const Hero = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 py-3 rounded-full border border-slate-600 hover:border-indigo-500 transition-all font-medium flex items-center gap-2"
+              className="pt-serif-regular px-6 py-3 rounded-full border border-slate-600 hover:border-indigo-500 transition-all font-medium flex items-center gap-2"
             >
               <HiMail className="text-lg" />
               Contact Me
@@ -234,9 +234,9 @@ const Hero = () => {
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="/Bijaya%20Tamang.pdf"
+            href="/public/bijaya-tamang.pdf"
             download
-            className="px-6 py-3 rounded-full bg-slate-800 hover:bg-slate-700 transition-all font-medium flex items-center gap-2"
+            className="pt-serif-regular px-6 py-3 rounded-full bg-slate-800 hover:bg-slate-700 transition-all font-medium flex items-center gap-2"
           >
             <FaFileDownload className="text-lg" />
             Resume
@@ -254,7 +254,7 @@ const Hero = () => {
             whileHover={{ y: -5, scale: 1.1 }}
             href="https://github.com/kojing777"
             target="_blank"
-            className="p-3 rounded-full bg-slate-800 hover:bg-indigo-600 transition-colors"
+            className="p-3 rounded-full bg-slate-800 hover:bg-indigo-600 transition-all duration-300 ease-in-out transform-gpu"
             aria-label="GitHub"
           >
             <FaGithub className="text-xl" />
@@ -263,7 +263,7 @@ const Hero = () => {
             whileHover={{ y: -5, scale: 1.1 }}
             href="https://linkedin.com"
             target="_blank"
-            className="p-3 rounded-full bg-slate-800 hover:bg-indigo-600 transition-colors"
+            className="p-3 rounded-full bg-slate-800 hover:bg-indigo-600 transition-all duration-300 ease-in-out transform-gpu"
             aria-label="LinkedIn"
           >
             <FaLinkedin className="text-xl" />
@@ -272,7 +272,7 @@ const Hero = () => {
             whileHover={{ y: -5, scale: 1.1 }}
             href="https://twitter.com"
             target="_blank"
-            className="p-3 rounded-full bg-slate-800 hover:bg-indigo-600 transition-colors"
+            className="p-3 rounded-full bg-slate-800 hover:bg-indigo-600 transition-all duration-300 ease-in-out transform-gpu"
             aria-label="Twitter"
           >
             <FaTwitter className="text-xl" />
@@ -324,7 +324,7 @@ const Hero = () => {
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
           className="absolute -top-4 -right-4 md:-top-6 md:-right-6 w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center shadow-lg shadow-indigo-500/30"
         >
-          <span className="text-white font-bold">React</span>
+          <span className="text-white roboto-slab font-bold">React</span>
         </motion.div>
         <motion.div
           animate={{ y: [0, 15, 0], rotate: [0, -10, 0] }}
@@ -336,7 +336,7 @@ const Hero = () => {
           }}
           className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center shadow-lg shadow-purple-500/30"
         >
-          <span className="text-white font-bold">JS</span>
+          <span className="text-white roboto-slab font-bold">JS</span>
         </motion.div>
       </motion.div>
 

@@ -1,1 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&family=Monoton&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Playwrite+NO:wght@100..400&family=Playwrite+NZ+Guides&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto+Slab:wght@100..900&family=Sofia&display=swap');
+
 @import "tailwindcss";
+
+/* Helper class for TypeAnimation font stack */
+.type-animation-font {
+	font-family: "Outfit", "PT Serif", "Playfair", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Heading font helper: prefer Roboto Slab for hero headings */
+.hero-heading-font {
+	font-family: "Roboto Slab", "Outfit", "PT Serif", "Playfair", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.monoton-regular {
+  font-family: "Monoton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.playwrite-no {
+  font-family: "Playwrite NO", sans-serif;
+  font-weight: 100 400;
+  font-style: normal;
+}
+
+.pt-serif-regular {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pt-serif-bold {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.pt-serif-regular-italic {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.pt-serif-bold-italic {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+.playwrite-nz-guides-regular {
+  font-family: "Playwrite NZ Guides", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.playwrite-nz-guides-bold {
+  font-family: "Playwrite NZ Guides", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+.playwrite-nz-guides-italic {
+  font-family: "Playwrite NZ Guides", cursive;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-slab{
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.oswald {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.sofia-regular {
+  font-family: "Sofia", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.sofia-bold {
+  font-family: "Sofia", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.alkalami-regular {
+  font-family: "Alkalami", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+

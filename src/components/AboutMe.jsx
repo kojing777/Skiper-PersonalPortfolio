@@ -243,13 +243,13 @@ const AboutMe = () => {
           className="mx-auto mb-16 text-center"
         >
           <motion.h1
-            className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6"
+            className="alkalami-regular text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
             About{" "}
-            <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 text-transparent bg-clip-text">
+            <span className="alkalami-regular bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 text-transparent bg-clip-text">
               Me
             </span>
           </motion.h1>

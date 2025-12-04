@@ -147,7 +147,7 @@ const Navbar = () => {
         className={`fixed top-5 left-1/2 -translate-x-1/2 z-50 
           flex items-center px-4 md:px-6 transition-all duration-500 ease-in-out
           nav-glass shadow-xl rounded-full
-          h-14 md:h-16
+          h-14 md:h-16 pt-serif-regular
           ${
             isScrolled
               ? "w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%] scale-100"
@@ -162,13 +162,13 @@ const Navbar = () => {
           whileTap={{ scale: 0.95 }}
         >
           <motion.div
-            className={`flex items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 
+            className={`flex items-center justify-center rounded-full bg-gradient-to-br from-red-300 to-purple-600 
             transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 w-9 h-9 md:w-10 md:h-10 logo-glow`}
             whileHover={{ rotate: 360 }}
             transition={{ duration: 0.5 }}
           >
-            <span className="font-bold text-white text-sm md:text-base">
-              BT
+            <span className="font-bold text-white text-base md:text-xl sofia-bold">
+              Bj
             </span>
           </motion.div>
         </motion.a>

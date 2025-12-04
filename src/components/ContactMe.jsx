@@ -150,7 +150,7 @@ const ContactMe = () => {
           className="mx-auto mb-16 text-center"
         >
           <motion.h1
-            className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6"
+            className="text-4xl alkalami-regular md:text-5xl lg:text-6xl font-extrabold mb-6"
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.5 }}
@@ -163,7 +163,7 @@ const ContactMe = () => {
           </motion.h1>
 
           <motion.p
-            className="text-xl max-w-3xl mx-auto text-slate-300 mb-6"
+            className="text-xl roboto-slab md:text-2xl max-w-4xl mx-auto text-slate-300 mb-6"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
@@ -186,7 +186,7 @@ const ContactMe = () => {
             className="space-y-8"
           >
             <motion.h2
-              className="text-3xl font-bold flex items-center gap-3"
+              className="text-3xl font-bold pt-serif-regular flex items-center gap-3"
               variants={itemVariants}
             >
               <motion.div
@@ -199,7 +199,7 @@ const ContactMe = () => {
             </motion.h2>
 
             <motion.p
-              className="text-lg text-slate-300"
+              className="text-lg roboto-slab text-slate-300"
               variants={itemVariants}
             >
               I'm currently available for freelance work and open to full-time
@@ -207,9 +207,9 @@ const ContactMe = () => {
               or think you need my help with something, then get in touch.
             </motion.p>
 
-            <motion.div className="space-y-6" variants={itemVariants}>
+            <motion.div className="space-y-6 roboto-slab" variants={itemVariants}>
               <motion.div
-                className="flex items-center gap-4 p-4 rounded-xl bg-slate-800/30 border border-slate-700/30 transition-colors hover:bg-slate-800/50"
+                className="flex  items-center gap-4 p-4 rounded-xl bg-slate-800/30 border border-slate-700/30 transition-colors hover:bg-slate-800/50"
                 variants={itemVariants}
                 whileHover={{
                   scale: 1.02,
@@ -218,8 +218,8 @@ const ContactMe = () => {
               >
                 <motion.div
                   className="p-3 rounded-full bg-indigo-500/20"
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.5 }}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  transition={{ duration: 0.2 }}
                 >
                   <Mail className="text-indigo-400" size={24} />
                 </motion.div>
@@ -239,8 +239,8 @@ const ContactMe = () => {
               >
                 <motion.div
                   className="p-3 rounded-full bg-purple-500/20"
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.5 }}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  transition={{ duration: 0.2 }}
                 >
                   <Phone className="text-purple-400" size={24} />
                 </motion.div>
@@ -260,8 +260,8 @@ const ContactMe = () => {
               >
                 <motion.div
                   className="p-3 rounded-full bg-pink-500/20"
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.5 }}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  transition={{ duration: 0.2 }}
                 >
                   <MapPin className="text-pink-400" size={24} />
                 </motion.div>
@@ -295,8 +295,9 @@ const ContactMe = () => {
                     href={item.url}
                     target="_blank"
                     variants={itemVariants}
-                    whileHover={{ scale: 1.1, y: -2 }}
+                    whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.95 }}
+                    transition={{ duration: 0.2 }}
                     className={`text-slate-400 transition-colors p-3 rounded-full bg-slate-800/30 border border-slate-700/30 ${item.color}`}
                     aria-label={item.label}
                   >

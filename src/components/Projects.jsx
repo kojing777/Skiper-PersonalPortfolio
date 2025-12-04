@@ -169,7 +169,7 @@ const Projects = () => {
       technologies: ["MERN", "Tailwind CSS", "OpenAI", "ImageKit", "Stripe"],
       stack: ["Full-Stack", "AI Integration", "Payments"],
       icons: [FaReact, FaNodeJs, SiMongodb, SiTailwindcss],
-      githubUrl: "https://github.com/kojing777/Lama-AI",
+      githubUrl: "https://github.com/kojing777/LamaAI",
       liveUrl: "https://lama-ai-five.vercel.app/",
       image:
         "https://res.cloudinary.com/dp27ua535/image/upload/v1764830451/Screenshot_2025-12-04_122538_nqfmkn.png",

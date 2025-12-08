@@ -28,17 +28,27 @@ const Navbar = () => {
       setIsScrolled(window.scrollY > 20);
 
       // Update active section on scroll
-      const sections = ["top", "about", "projects", "skills", "experience", "contact"];
+      const sections = [
+        "top",
+        "about",
+        "projects",
+        "skills",
+        "experience",
+        "contact",
+      ];
       let currentSection = "top";
       for (let section of sections) {
         const el = document.getElementById(section);
         if (el && window.scrollY >= el.offsetTop - window.innerHeight / 2) {
-          currentSection = section === "top" ? "Home" : section.charAt(0).toUpperCase() + section.slice(1);
+          currentSection =
+            section === "top"
+              ? "Home"
+              : section.charAt(0).toUpperCase() + section.slice(1);
         }
       }
       setActiveLink(currentSection);
     };
-    
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -52,15 +62,18 @@ const Navbar = () => {
     { name: "Contact", path: "/contact" },
   ];
 
-  const handleScrollTo = useCallback((path) => {
-    let sectionId = path === "/" ? "top" : path.replace("/", "");
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-    setActiveLink(navLinks.find(link => link.path === path)?.name);
-    setIsMenuOpen(false);
-  }, [navLinks]);
+  const handleScrollTo = useCallback(
+    (path) => {
+      let sectionId = path === "/" ? "top" : path.replace("/", "");
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+      setActiveLink(navLinks.find((link) => link.path === path)?.name);
+      setIsMenuOpen(false);
+    },
+    [navLinks]
+  );
 
   return (
     <>
@@ -176,8 +189,8 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-1 mx-auto">
           {navLinks.map((link, index) => (
-            <motion.div 
-              key={index} 
+            <motion.div
+              key={index}
               className="relative"
               onHoverStart={() => setHoveredLink(link.name)}
               onHoverEnd={() => setHoveredLink(null)}
@@ -193,7 +206,7 @@ const Navbar = () => {
                 onClick={() => handleScrollTo(link.path)}
               >
                 {link.name}
-                
+
                 {/* Animated Gradient Underline */}
                 {(activeLink === link.name || hoveredLink === link.name) && (
                   <motion.div
@@ -201,11 +214,11 @@ const Navbar = () => {
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
                     exit={{ scaleX: 0 }}
-                    transition={{ 
-                      type: "spring", 
-                      stiffness: 400, 
+                    transition={{
+                      type: "spring",
+                      stiffness: 400,
                       damping: 30,
-                      duration: 0.3
+                      duration: 0.3,
                     }}
                   />
                 )}
@@ -284,7 +297,7 @@ const Navbar = () => {
                     onClick={() => handleScrollTo(link.path)}
                   >
                     {link.name}
-                    
+
                     {/* Mobile Active Indicator */}
                     {activeLink === link.name && (
                       <motion.div

@@ -164,7 +164,10 @@ const Experience = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            My <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 text-transparent bg-clip-text">Journey</span>
+            My{" "}
+            <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 text-transparent bg-clip-text">
+              Journey
+            </span>
           </motion.h1>
 
           <motion.p
@@ -291,8 +294,12 @@ const Experience = () => {
                       <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-4 mb-3 sm:mb-4">
                         <div className="flex items-center gap-3">
                           <div>
-                            <h3 className="text-lg md:text-2xl sm:text-xl pt-serif-regular font-bold">{exp.role}</h3>
-                            <p className="text-slate-300 roboto-slab">{exp.company}</p>
+                            <h3 className="text-lg md:text-2xl sm:text-xl pt-serif-regular font-bold">
+                              {exp.role}
+                            </h3>
+                            <p className="text-slate-300 roboto-slab">
+                              {exp.company}
+                            </p>
                           </div>
                         </div>
                         <div className="flex items-center gap-2 text-slate-400 text-sm">
@@ -301,7 +308,9 @@ const Experience = () => {
                         </div>
                       </div>
 
-                      <p className="text-slate-300 roboto-slab mb-4 text-sm sm:text-base">{exp.description}</p>
+                      <p className="text-slate-300 roboto-slab mb-4 text-sm sm:text-base">
+                        {exp.description}
+                      </p>
 
                       <div className="mb-4">
                         <h4 className="font-semibold text-slate-200 mb-2 flex items-center gap-2">
@@ -384,14 +393,16 @@ const Experience = () => {
                     whileHover={{ y: -5, transition: { duration: 0.2 } }}
                   >
                     <div className="flex items-center gap-4 mb-4">
-                      <motion.div
-                        className="text-2xl p-3 rounded-full bg-purple-600/20"
-                      >
+                      <motion.div className="text-2xl p-3 rounded-full bg-purple-600/20">
                         <FaGraduationCap className="text-purple-400" />
                       </motion.div>
                       <div>
-                        <h3 className="text-xl pt-serif-regular font-bold">{edu.degree}</h3>
-                        <p className="text-slate-300 roboto-slab">{edu.institution}</p>
+                        <h3 className="text-xl pt-serif-regular font-bold">
+                          {edu.degree}
+                        </h3>
+                        <p className="text-slate-300 roboto-slab">
+                          {edu.institution}
+                        </p>
                       </div>
                     </div>
 
@@ -400,7 +411,9 @@ const Experience = () => {
                       <span>{edu.duration}</span>
                     </div>
 
-                    <p className="text-slate-300 roboto-slab mb-4">{edu.description}</p>
+                    <p className="text-slate-300 roboto-slab mb-4">
+                      {edu.description}
+                    </p>
 
                     <div>
                       <h4 className="font-semibold text-slate-200 mb-2 flex items-center gap-2">

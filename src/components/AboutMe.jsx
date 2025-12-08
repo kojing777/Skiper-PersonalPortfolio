@@ -231,7 +231,10 @@ const AboutMe = () => {
   const isInView = useInView(aboutRef, { once: true, amount: 0.3 });
 
   return (
-    <section id="about" className="relative min-h-screen py-12 px-6 md:px-20 lg:px-32 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden pt-20">
+    <section
+      id="about"
+      className="relative min-h-screen py-12 px-6 md:px-20 lg:px-32 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden pt-20"
+    >
       <AnimatedBackground />
 
       <div className="relative z-10 max-w-7xl mx-auto">
@@ -520,9 +523,9 @@ const AboutMe = () => {
             whileTap={{ scale: 0.95 }}
             className="pt-serif-regular bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-medium py-3 px-8 rounded-full transition-all duration-300"
             onClick={() => {
-              const contactSection = document.getElementById('contact');
+              const contactSection = document.getElementById("contact");
               if (contactSection) {
-                contactSection.scrollIntoView({ behavior: 'smooth' });
+                contactSection.scrollIntoView({ behavior: "smooth" });
               }
             }}
           >

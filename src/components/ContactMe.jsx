@@ -207,7 +207,10 @@ const ContactMe = () => {
               or think you need my help with something, then get in touch.
             </motion.p>
 
-            <motion.div className="space-y-5 roboto-slab" variants={itemVariants}>
+            <motion.div
+              className="space-y-5 roboto-slab"
+              variants={itemVariants}
+            >
               <motion.div
                 className="flex  items-center gap-4 p-4 rounded-xl bg-slate-800/30 border border-slate-700/30 transition-colors hover:bg-slate-800/50"
                 variants={itemVariants}
@@ -274,7 +277,9 @@ const ContactMe = () => {
 
             {/* Social Links */}
             <motion.div className="pt-0" variants={itemVariants}>
-              <h3 className="text-xl pt-serif-regular font-semibold mb-4">Follow me on</h3>
+              <h3 className="text-xl pt-serif-regular font-semibold mb-4">
+                Follow me on
+              </h3>
               <div className="flex gap-4">
                 {[
                   {
@@ -361,7 +366,10 @@ const ContactMe = () => {
                     Send a Message
                   </motion.h2>
 
-                  <form onSubmit={handleSubmit} className="space-y-6 roboto-slab">
+                  <form
+                    onSubmit={handleSubmit}
+                    className="space-y-6 roboto-slab"
+                  >
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -379,7 +387,11 @@ const ContactMe = () => {
                           <User className="text-slate-500" size={20} />
                         </div>
                         <motion.input
-                          whileHover={{ scale: 1.005, y: -1, boxShadow: "0 4px 12px rgba(99, 102, 241, 0.15)" }}
+                          whileHover={{
+                            scale: 1.005,
+                            y: -1,
+                            boxShadow: "0 4px 12px rgba(99, 102, 241, 0.15)",
+                          }}
                           transition={{ duration: 0.2 }}
                           type="text"
                           id="name"
@@ -410,7 +422,11 @@ const ContactMe = () => {
                           <Mail className="text-slate-500" size={20} />
                         </div>
                         <motion.input
-                          whileHover={{ scale: 1.005, y: -1, boxShadow: "0 4px 12px rgba(99, 102, 241, 0.15)" }}
+                          whileHover={{
+                            scale: 1.005,
+                            y: -1,
+                            boxShadow: "0 4px 12px rgba(99, 102, 241, 0.15)",
+                          }}
                           transition={{ duration: 0.2 }}
                           type="email"
                           id="email"
@@ -437,7 +453,11 @@ const ContactMe = () => {
                         Your Message
                       </label>
                       <motion.textarea
-                        whileHover={{ scale: 1.005, y: -1, boxShadow: "0 4px 12px rgba(99, 102, 241, 0.15)" }}
+                        whileHover={{
+                          scale: 1.005,
+                          y: -1,
+                          boxShadow: "0 4px 12px rgba(99, 102, 241, 0.15)",
+                        }}
                         transition={{ duration: 0.2 }}
                         id="message"
                         name="message"

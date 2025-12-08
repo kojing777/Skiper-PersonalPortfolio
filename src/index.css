@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Alkalami&family=Monoton&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Playwrite+NO:wght@100..400&family=Playwrite+NZ+Guides&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto+Slab:wght@100..900&family=Sofia&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alkalami&family=Monoton&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Playwrite+NO:wght@100..400&family=Playwrite+NZ+Guides&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto+Slab:wght@100..900&family=Sofia&display=swap");
 
 @import "tailwindcss";
 
-/* Helper class for TypeAnimation font stack */
 .type-animation-font {
-	font-family: "Outfit", "PT Serif", "Playfair", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Outfit", "PT Serif", "Playfair", system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-/* Heading font helper: prefer Roboto Slab for hero headings */
 .hero-heading-font {
-	font-family: "Roboto Slab", "Outfit", "PT Serif", "Playfair", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Roboto Slab", "Outfit", "PT Serif", "Playfair", system-ui,
+    -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 .monoton-regular {
   font-family: "Monoton", sans-serif;
@@ -62,7 +62,7 @@
   font-style: italic;
 }
 
-.roboto-slab{
+.roboto-slab {
   font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -92,12 +92,10 @@
   font-style: normal;
 }
 
-
 .playfair-regular {
   font-family: "Playfair", serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  font-variation-settings: "wdth" 100;
 }

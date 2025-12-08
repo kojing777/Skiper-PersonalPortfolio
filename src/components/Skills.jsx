@@ -159,7 +159,9 @@ const Skills = () => {
                   className="flex alkalami-regular flex-col items-center justify-center bg-gradient-to-b from-slate-800 to-slate-900 p-4 rounded-xl border border-slate-700/50 shadow-md min-w-[120px]"
                 >
                   <div className="text-3xl mb-2">{tool.icon}</div>
-                  <p className="font-medium roboto-slab text-center">{tool.name}</p>
+                  <p className="font-medium roboto-slab text-center">
+                    {tool.name}
+                  </p>
                 </motion.div>
               ))}
             </div>

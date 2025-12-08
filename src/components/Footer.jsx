@@ -84,7 +84,9 @@ const Footer = () => {
           <h2 className="text-3xl sofia-regular font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mt-2">
             Bijaya Tamang
           </h2>
-          <p className="text-sm roboto-slab text-slate-400 mt-1.5">MERN Stack Developer.</p>
+          <p className="text-sm roboto-slab text-slate-400 mt-1.5">
+            MERN Stack Developer.
+          </p>
         </motion.div>
 
         {/* Navigation Links */}

@@ -175,7 +175,7 @@ const Navbar = () => {
           whileTap={{ scale: 0.95 }}
         >
           <motion.div
-            className={`flex items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-purple-500
+            className={`flex items-center justify-center rounded-full bg-linear-to-r from-blue-500 to-purple-500
             transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 w-9 h-9 md:w-10 md:h-10 logo-glow`}
             whileHover={{ rotate: 360 }}
             transition={{ duration: 0.5 }}
@@ -210,7 +210,7 @@ const Navbar = () => {
                 {/* Animated Gradient Underline */}
                 {(activeLink === link.name || hoveredLink === link.name) && (
                   <motion.div
-                    className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"
+                    className="absolute bottom-0 left-0 w-full h-0.5 bg-linear-to-r from-indigo-500 to-purple-500 rounded-full"
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
                     exit={{ scaleX: 0 }}
@@ -291,7 +291,7 @@ const Navbar = () => {
                     className={`relative w-full text-center py-3 px-4 rounded-lg transition-all duration-300 overflow-hidden
                       ${
                         activeLink === link.name
-                          ? "bg-gradient-to-r from-indigo-600/20 to-purple-600/20 text-white"
+                          ? "bg-linear-to-r from-indigo-600/20 to-purple-600/20 text-white"
                           : "text-slate-300 hover:text-white hover:bg-slate-800/50"
                       }`}
                     onClick={() => handleScrollTo(link.path)}
@@ -301,7 +301,7 @@ const Navbar = () => {
                     {/* Mobile Active Indicator */}
                     {activeLink === link.name && (
                       <motion.div
-                        className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500"
+                        className="absolute bottom-0 left-0 w-full h-0.5 bg-linear-to-r from-indigo-500 to-purple-500"
                         initial={{ scaleX: 0 }}
                         animate={{ scaleX: 1 }}
                         transition={{ duration: 0.3 }}
